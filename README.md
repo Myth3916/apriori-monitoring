@@ -30,18 +30,36 @@
                                          └─────────────┘
 ```
 
+```
+## 🛠 Используемые технологии
+
+| Компонент | Версия | Назначение |
+|-----------|--------|------------|
+| Docker | 29.6.1 | Контейнеризация |
+| Docker Compose | 5.3.1 | Оркестрация контейнеров |
+| Mosquitto | 2.1.2 | MQTT брокер |
+| Python | 3.14.6 | MQTT экспортер |
+| Prometheus | latest | Сбор метрик |
+| Grafana | latest | Визуализация и алертинг |
+| Node Exporter | latest | Мониторинг хоста |
+| paho-mqtt | 2.1.0 | Python MQTT клиент |
+| prometheus_client | 0.25.0 | Python Prometheus клиент |
+```
+
+
 ## 🚀 Быстрый старт
 
 ### Требования
-- Docker >= 20.10
-- Docker Compose >= 2.0
-- Python 3.11+ (для локальной разработки)
+- Docker >= 20.10 (протестировано на 29.6.1)
+- Docker Compose >= 2.0 (протестировано на 5.3.1)
+- Python 3.11+ (протестировано на 3.14.6)
+- Git
 
 ### Установка
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/YOUR_USERNAME/apriori-monitoring.git
+git clone https://github.com/Myth3916/apriori-monitoring
 cd apriori-monitoring
 ```
 
@@ -165,6 +183,11 @@ python mqtt_exporter.py
 ### Контейнер не запускается:
 ```bash
 docker-compose logs <service_name>
+```
+```
+### Ошибка "Отказано в доступе" для mosquitto/data/
+Это нормально — папка принадлежит пользователю Mosquitto внутри контейнера (UID 1883).
+Git игнорирует её через .gitignore, поэтому на работу системы это не влияет.
 ```
 
 ### Метрики не появляются:
