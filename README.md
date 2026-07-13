@@ -137,6 +137,24 @@ docker-compose up -d
 - Использование диска
 - Сетевой трафик
 
+## 📸 Скриншоты
+
+### Дашборд "Состояние парка"
+![Состояние парка](docs/screenshots/dashboard-park.png)
+
+### Дашборд "Детальный статус трактора"
+![Детальный статус трактора](docs/screenshots/dashboard-tractor.png)
+
+### Дашборд "Серверная инфраструктура"
+![Серверная инфраструктура](docs/screenshots/dashboard-server.png)
+
+### Уведомления в Telegram
+![Алерты в Telegram](docs/screenshots/alert-telegram.png)
+
+### Prometheus Targets
+![Prometheus Targets](docs/screenshots/prometheus-targets.png)
+
+
 ## 🚨 Алерты
 
 ### Настроенные алерты:
